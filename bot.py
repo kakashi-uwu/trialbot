@@ -1,20 +1,20 @@
-import telebot
+import os
+from telegram.ext import Updater, CommandHandler
 
-# Replace with your bot token
-TOKEN = '5063237105:AAHGFmZ1RFNhil9xo0oeLDPYc_TULjAWxNM'
+def start(update, context):
+    context.bot.send_message(chat_id=update.message.chat_id, text="Hello! I'm a bot.")
 
-# Create a new bot instance using the token
-bot = telebot.TeleBot(TOKEN)
+def main():
+    TOKEN = os.environ.get('BOT_TOKEN')
+    if not TOKEN:
+        print('Error: Please set the BOT_TOKEN environment variable.')
+        return
 
-# Define a command handler
-@bot.message_handler(commands=['start'])
-def start(message):
-    bot.reply_to(message, "Hello, welcome to my bot!")
+    updater = Updater(TOKEN, use_context=True)
+    dispatcher = updater.dispatcher
+    dispatcher.add_handler(CommandHandler('start', start))
 
-# Define a message handler
-@bot.message_handler(func=lambda message: True)
-def echo(message):
-    bot.reply_to(message, message.text)
+    updater.start_polling()
 
-# Start the bot
-bot.polling()
+if __name__ == '__main__':
+    main()
