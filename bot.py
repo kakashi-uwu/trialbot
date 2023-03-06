@@ -32,7 +32,7 @@ def main():
     updater = Updater(TOKEN, use_context=True)
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler('start', start))
-    fstart_handler = DisableAbleCommandHandler("fstart", fstart)
+    fstart_handler = CommandHandler("fstart", fstart)
 
     updater.start_polling()
 
