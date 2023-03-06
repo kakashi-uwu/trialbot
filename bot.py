@@ -1,22 +1,24 @@
-import os
+import telegram
 from telegram.ext import Updater, CommandHandler
 
 
-def start(update, context):
-    context.bot.send_message(chat_id=update.message.chat_id, text="Hello! I'm a bot("https://graph.org//file/7b263b04a2fe3559bd769.jpg").")
-    
+start_image="https://graph.org//file/7b263b04a2fe3559bd769.jpg"
+# Replace YOUR_TOKEN_HERE with your actual Telegram bot token
+bot = telegram.Bot(token='5792603393:AAEIi1EyAToI0bMNp5WkVXb7kdd7HLKCjNw')
 
+def start(update, context):
+    chat_id = update.message.chat_id
+    context.bot.send_photo(chat_id=chat_id, photo=open('start_image', 'rb'))
 
 def main():
-    TOKEN = os.environ.get('BOT_TOKEN')
-    if not TOKEN:
-        print('Error: Please set the BOT_TOKEN environment variable.')
-        return
-
-    updater = Updater(TOKEN, use_context=True)
+    updater = Updater(token='5792603393:AAEIi1EyAToI0bMNp5WkVXb7kdd7HLKCjNw', use_context=True)
     dispatcher = updater.dispatcher
-    dispatcher.add_handler(CommandHandler('start', start))
+
+    start_handler = CommandHandler('start', start)
+    dispatcher.add_handler(start_handler)
+
     updater.start_polling()
+    updater.idle()
 
 if __name__ == '__main__':
     main()
