@@ -10,7 +10,7 @@ def main():
         print('Error: Please set the BOT_TOKEN environment variable.')
         return
     
- def handle_message(update, context):
+def handle_message(update, context):
     text = update.message.text
     if text == '/gstart':
         context.bot.send_message(chat_id=update.effective_chat.id, text="Hello! Type /game to play my game.")
