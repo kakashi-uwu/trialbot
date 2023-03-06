@@ -8,7 +8,7 @@ bot = telegram.Bot(token='5792603393:AAEIi1EyAToI0bMNp5WkVXb7kdd7HLKCjNw')
 
 def start(update, context):
     chat_id = update.message.chat_id
-    context.bot.send_photo(chat_id=chat_id, photo=open('start_image', 'rb'))
+    context.bot.send_photo(chat_id=chat_id, photo=open('start_image'))
 
 def main():
     updater = Updater(token='5792603393:AAEIi1EyAToI0bMNp5WkVXb7kdd7HLKCjNw', use_context=True)
