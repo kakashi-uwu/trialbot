@@ -7,7 +7,6 @@ def start(update, context):
     context.bot.send_message(chat_id=update.message.chat_id, text="Hello! I'm a bot.")
     
 def fstart(update, context):    
-       first_name = update.effective_user.first_name
        update.effective_message.reply_animation(
             START_IMG, caption= "hey there im a trial bot".format(
              first_name,uptime
@@ -32,7 +31,7 @@ def main():
     updater = Updater(TOKEN, use_context=True)
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler('start', start))
-    fstart_handler = CommandHandler("fstart", fstart)
+    fstart_handler = CommandHandler("fstart", start)
 
     updater.start_polling()
 
