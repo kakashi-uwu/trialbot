@@ -1,7 +1,9 @@
 import os
 from telegram.ext import Updater, CommandHandler
 
-
+def start(update, context):
+    context.bot.send_message(chat_id=update.message.chat_id, text="Hello! I'm a bot.")
+    
 def main():
     TOKEN = os.environ.get('BOT_TOKEN')
     if not TOKEN:
