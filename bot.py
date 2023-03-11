@@ -1,7 +1,7 @@
 import telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-TOKEN = '5792603393:AAEIi1EyAToI0bMNp5WkVXb7kdd7HLKCjNw'
+TOKEN = '5790186855:AAGkEwBLRNW9Ync0JN6pzI9BJBaNpgtW_tw'
 
 def start(update: Update, context: CallbackContext):
     args = context.args
