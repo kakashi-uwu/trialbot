@@ -92,7 +92,7 @@ def echo(update, context):
     context.bot.send_message(chat_id=update.message.chat_id, text=update.message.text)
 
 def main():
-    updater = Updater(TOKEN, use_context=True)
+    updater = Update(TOKEN, use_context=True)
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler('start', start))
