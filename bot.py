@@ -2,28 +2,15 @@ import os
 from telegram.ext import Updater, CommandHandler
 from telegram import InlineKeyboardButton
 
-START_IMG=("https://graph.org//file/7b263b04a2fe3559bd769.jpg")
+START_IMG=("https://graph.org//file/8a091b6e8593e5def3c45.jpg")
 
 PM_START_TEXT = """
-    ► *{}* ◄
-Kon'nichiwa I'm *Eru* I've got a lot of abilities to help you...\n
-*JOIN OUR* -
-[UPDATE CHANNEL](t.me/sinxupdates) - [SUPPORTCHAT](t.me/SinXsupport)\n
-──『*ᴛʜᴀɴᴋs  ғᴏʀ  ᴜsɪɴɢ*』
+Hey user I'm *Ichigo* my working structure is still on update...\n
+*Updating.......* -
+[Boss](t.me/notyourishanymore) - [babe](t.me/none)\n
+──『*Be patient well be back soon*』
 """
 
-buttons = [
-    [
-        InlineKeyboardButton(
-                            text="summon me",
-                            url="t.me/hinataxrobot?startgroup=true"),
-                    ],
-                   [
-                       InlineKeyboardButton(text="help and commands ?", callback_data="help_back"),
-                       InlineKeyboardButton(text="about me", callback_data="vegeta_"
-         ),
-    ],
-] 
 
 
 def start(update, context):
