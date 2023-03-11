@@ -5,7 +5,7 @@ from telegram import InlineKeyboardButton
 START_IMG=("https://graph.org//file/e500a5e4524c6cad31096.png")
 
 PM_START_TEXT = """
-Hey user I'm *Ichigo* my working structure is still on update...\n
+Hey user I'm *Boboiboy* my working structure is still on update...\n
 *Updating.......* 
 ──『*Be patient we'll be back soon*』
 """
