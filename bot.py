@@ -8,7 +8,9 @@ PM_START_TEXT = """hello vro"""
 
 
 def start(update, context):
-     context.bot.send_message(chat_id=update.message.chat_id, text="Hello vro kesa h?")
+    update.effective_message.reply_photo(
+     START_IMG,
+     PM_START_TEXT)
 
 def main():
     TOKEN = os.environ.get('BOT_TOKEN')
