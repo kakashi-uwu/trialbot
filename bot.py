@@ -3,6 +3,29 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 TOKEN = '5790186855:AAGkEwBLRNW9Ync0JN6pzI9BJBaNpgtW_tw'
 
+START_IMG=("https://graph.org//file/7b263b04a2fe3559bd769.jpg")
+
+PM_START_TEXT = """
+    ► *{}* ◄
+Kon'nichiwa I'm *NISHI* I've got a lot of abilities to help you...\n
+*JOIN OUR* -
+[UPDATE CHANNEL](t.me/notyourishanymore) - [SUPPORTCHAT](t.me/notyourishanymore)\n
+──『*ᴛʜᴀɴᴋs  ғᴏʀ  ᴜsɪɴɢ*』
+"""
+
+buttons = [
+    [
+        InlineKeyboardButton(
+                            text="summon me",
+                            url="t.me/elevatedrobot?startgroup=true"),
+                    ],
+                   [
+                       InlineKeyboardButton(text="help and commands ?", callback_data="help_back"),
+                       InlineKeyboardButton(text="about me", callback_data="vegeta_"
+         ),
+    ],
+] 
+
 def start(update: Updater):
     args = context.args
     uptime = get_readable_time((time.time() - StartTime))
@@ -37,7 +60,7 @@ def start(update: Updater):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
-               random.choice(HINATA_IMG),PM_START_TEXT.format(first_name),
+               random.choice(START_IMG),PM_START_TEXT.format(first_name),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -45,7 +68,7 @@ def start(update: Updater):
     else:
         first_name = update.effective_user.first_name
         update.effective_message.reply_animation(
-            GROUPSTART_IMG, caption= "*hello!\n ┗► {} ◄┛,*\n*I'm Hinata hyuga*\n*Haven't slept since* : {} ".format(
+            GROUPSTART_IMG, caption= "*hello!\n ┗► {} ◄┛,*\n*I'm BRUHa*\n*Haven't slept since* : {} ".format(
              first_name,uptime
             ),
             parse_mode=ParseMode.MARKDOWN,
