@@ -4,7 +4,26 @@ from telegram import InlineKeyboardButton
 
 START_IMG=("https://graph.org//file/7b263b04a2fe3559bd769.jpg")
 
-PM_START_TEXT = """trial bot demo on"""
+PM_START_TEXT = """
+    ► *{}* ◄
+Kon'nichiwa I'm *Eru* I've got a lot of abilities to help you...\n
+*JOIN OUR* -
+[UPDATE CHANNEL](t.me/sinxupdates) - [SUPPORTCHAT](t.me/SinXsupport)\n
+──『*ᴛʜᴀɴᴋs  ғᴏʀ  ᴜsɪɴɢ*』
+"""
+
+buttons = [
+    [
+        InlineKeyboardButton(
+                            text="summon me",
+                            url="t.me/hinataxrobot?startgroup=true"),
+                    ],
+                   [
+                       InlineKeyboardButton(text="help and commands ?", callback_data="help_back"),
+                       InlineKeyboardButton(text="about me", callback_data="vegeta_"
+         ),
+    ],
+] 
 
 
 def start(update, context):
