@@ -6,7 +6,7 @@ from telegram.ext import (
     Filters,
     MessageHandler,)
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-TOKEN = '5790186855:AAGkEwBLRNW9Ync0JN6pzI9BJBaNpgtW_tw'
+BOT_TOKEN = '5790186855:AAGkEwBLRNW9Ync0JN6pzI9BJBaNpgtW_tw'
 
 START_IMG=("https://graph.org//file/7b263b04a2fe3559bd769.jpg")
 
@@ -92,7 +92,7 @@ def echo(update, context):
     context.bot.send_message(chat_id=update.message.chat_id, text=update.message.text)
 
 def main():
-    updater = Updater(TOKEN, use_context=True)
+    updater = Updater(BOT_TOKEN, use_context=True)
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler('start', start))
