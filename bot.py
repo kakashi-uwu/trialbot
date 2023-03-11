@@ -1,6 +1,29 @@
 import os
 from telegram.ext import Updater, CommandHandler
 
+START_IMG=("https://graph.org//file/7b263b04a2fe3559bd769.jpg")
+
+PM_START_TEXT = """
+    ► *{}* ◄
+Kon'nichiwa I'm *ichigo* I've got a lot of abilities to help you...\n
+*JOIN OUR* -
+[UPDATE CHANNEL](t.me/hnhbhay) - [SUPPORTCHAT](t.me/nvkjehgfk)\n
+──『*ᴛʜᴀɴᴋs  ғᴏʀ  ᴜsɪɴɢ*』
+"""
+
+buttons = [
+    [
+        InlineKeyboardButton(
+                            text="summon me",
+                            url="t.me/hinataxrobot?startgroup=true"),
+                    ],
+                   [
+                       InlineKeyboardButton(text="help and commands ?", callback_data="help_back"),
+                       InlineKeyboardButton(text="about me", callback_data="vegeta_"
+         ),
+    ],
+] 
+
 def start(update, context):
           first_name = update.effective_user.first_name
           update.effective_message.reply_photo(
