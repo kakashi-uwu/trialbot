@@ -6,9 +6,8 @@ START_IMG=("https://graph.org//file/8a091b6e8593e5def3c45.jpg")
 
 PM_START_TEXT = """
 Hey user I'm *Ichigo* my working structure is still on update...\n
-*Updating.......* -
-[Boss](t.me/notyourishanymore)   [babe](t.me/none)\n
-──『*Be patient well be back soon*』
+*Updating.......* 
+──『*Be patient we'll be back soon*』
 """
 
 
