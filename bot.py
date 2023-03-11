@@ -1,6 +1,6 @@
 import telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 TOKEN = '5790186855:AAGkEwBLRNW9Ync0JN6pzI9BJBaNpgtW_tw'
 
 START_IMG=("https://graph.org//file/7b263b04a2fe3559bd769.jpg")
@@ -26,7 +26,7 @@ buttons = [
     ],
 ] 
 
-def start(update: Updater):
+def start(update: Update, context: CallbackContext):
     args = context.args
     uptime = get_readable_time((time.time() - StartTime))
     if update.effective_chat.type == "private":
