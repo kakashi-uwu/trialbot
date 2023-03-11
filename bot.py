@@ -24,8 +24,7 @@ buttons = [
 def start(update, context):
           first_name = update.effective_user.first_name
           update.effective_message.reply_photo(
-               random.choice(START_IMG),PM_START_TEXT.format(first_name),
-                reply_markup=InlineKeyboardMarkup(buttons),
+               random.choice(START_IMG),PM_START_TEXT,
                 timeout=60,
             )
     
