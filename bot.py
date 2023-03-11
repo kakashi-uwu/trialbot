@@ -5,11 +5,7 @@ from telegram import InlineKeyboardButton
 START_IMG=("https://graph.org//file/7b263b04a2fe3559bd769.jpg")
 
 PM_START_TEXT = """
-    ► *{}* ◄
-Kon'nichiwa I'm *ichigo* I've got a lot of abilities to help you...\n
-*JOIN OUR* -
-[UPDATE CHANNEL](t.me/hnhbhay) - [SUPPORTCHAT](t.me/nvkjehgfk)\n
-──『*ᴛʜᴀɴᴋs  ғᴏʀ  ᴜsɪɴɢ*』
+hello vro
 """
 
 buttons = [
@@ -30,7 +26,6 @@ def start(update, context):
           update.effective_message.reply_photo(
                random.choice(START_IMG),PM_START_TEXT.format(first_name),
                 reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
             )
     
