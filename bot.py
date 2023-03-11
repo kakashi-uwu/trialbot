@@ -4,9 +4,7 @@ from telegram import InlineKeyboardButton
 
 START_IMG=("https://graph.org//file/7b263b04a2fe3559bd769.jpg")
 
-PM_START_TEXT = """
-hello vro
-"""
+PM_START_TEXT = """hello vro"""
 
 
 def start(update, context):
