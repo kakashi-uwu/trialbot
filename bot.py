@@ -8,21 +8,8 @@ PM_START_TEXT = """
 hello vro
 """
 
-buttons = [
-    [
-        InlineKeyboardButton(
-                            text="summon me",
-                            url="t.me/hinataxrobot?startgroup=true"),
-                    ],
-                   [
-                       InlineKeyboardButton(text="help and commands ?", callback_data="help_back"),
-                       InlineKeyboardButton(text="about me", callback_data="vegeta_"
-         ),
-    ],
-] 
 
 def start(update, context):
-          first_name = update.effective_user.first_name
           update.effective_message.reply_photo(
                random.choice(START_IMG),PM_START_TEXT,
                 timeout=60,
