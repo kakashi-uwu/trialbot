@@ -2,12 +2,12 @@ import os
 from telegram.ext import Updater, CommandHandler
 from telegram import InlineKeyboardButton
 
-START_IMG=("https://graph.org//file/f6edff8ccc201180e55d5.png")
+START_IMG=("https://graph.org//file/8a091b6e8593e5def3c45.jpg")
 
 PM_START_TEXT = """
-soch rha hoga itna khush kyu hu?...\n
-*kuch nhi vro bas indumati ne dene ko han bol diya.......* 
-──『*aata hu seggs krke*』
+Hey guys I'm ichigo, see am back...\n
+*I'll be ready soon rn I'm under maintenance hehe.......* 
+──『*Launching soon..*』
 """
 
 
