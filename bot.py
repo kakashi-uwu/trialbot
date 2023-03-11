@@ -3,7 +3,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 TOKEN = '5790186855:AAGkEwBLRNW9Ync0JN6pzI9BJBaNpgtW_tw'
 
-def start(update: Update, context: CallbackContext):
+def start(update: Updater, context: CallbackContext):
     args = context.args
     uptime = get_readable_time((time.time() - StartTime))
     if update.effective_chat.type == "private":
