@@ -2,7 +2,7 @@ import os
 from telegram.ext import Updater, CommandHandler
 from telegram import InlineKeyboardButton
 
-START_IMG=("https://graph.org//file/8a091b6e8593e5def3c45.jpg")
+START_IMG=("https://graph.org//file/e500a5e4524c6cad31096.png")
 
 PM_START_TEXT = """
 Hey user I'm *Ichigo* my working structure is still on update...\n
