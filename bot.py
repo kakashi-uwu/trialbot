@@ -1,3 +1,4 @@
+import os
 import telegram
 from telegram.ext import (
     CallbackContext,
@@ -5,7 +6,7 @@ from telegram.ext import (
     CommandHandler,
     Filters,
     MessageHandler,)
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Updater
 BOT_TOKEN = '5790186855:AAGkEwBLRNW9Ync0JN6pzI9BJBaNpgtW_tw'
 
 START_IMG=("https://graph.org//file/7b263b04a2fe3559bd769.jpg")
